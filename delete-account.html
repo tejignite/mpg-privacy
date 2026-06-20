@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Request Account Deletion — Mahaveer Palm Grove</title>
+  <title>Data &amp; Account Deletion — Mahaveer Palm Grove</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -18,7 +18,7 @@
       padding: 24px 0;
     }
     header .inner {
-      max-width: 640px;
+      max-width: 680px;
       margin: 0 auto;
       padding: 0 24px;
       display: flex;
@@ -41,66 +41,73 @@
     header h1 { font-size: 1.1rem; font-weight: 600; color: #1E293B; }
     header p  { font-size: 0.85rem; color: #64748B; }
     main {
-      max-width: 640px;
+      max-width: 680px;
       margin: 48px auto 80px;
       padding: 0 24px;
+    }
+    .intro {
+      font-size: 0.95rem;
+      color: #475569;
+      margin-bottom: 32px;
     }
     .card {
       background: #ffffff;
       border: 1px solid #E2E8F0;
       border-radius: 16px;
-      padding: 36px;
+      padding: 32px;
+      margin-bottom: 24px;
     }
-    .card h2 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: #1E293B;
-      margin-bottom: 12px;
-    }
-    .card p {
-      font-size: 0.95rem;
-      color: #475569;
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
       margin-bottom: 16px;
     }
+    .badge {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+    .badge-partial { background: #EEF2FF; }
+    .badge-full    { background: #FFF1F2; }
+    .card h2 { font-size: 1.05rem; font-weight: 700; color: #1E293B; margin-bottom: 4px; }
+    .card .sub { font-size: 0.82rem; color: #94A3B8; font-weight: 500; }
+    p { margin-bottom: 12px; color: #475569; font-size: 0.92rem; }
+    ul {
+      margin: 6px 0 14px 18px;
+      color: #475569;
+      font-size: 0.92rem;
+    }
+    ul li { margin-bottom: 5px; }
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 13px 26px;
+      border-radius: 10px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+    .btn-indigo { background: #4F46E5; color: #fff; }
+    .btn-red    { background: #DC2626; color: #fff; }
+    .btn:hover { opacity: 0.88; }
     .info-box {
       background: #FFF7ED;
       border: 1px solid #FED7AA;
       border-radius: 10px;
-      padding: 16px 20px;
-      margin: 24px 0;
-      font-size: 0.9rem;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 0.88rem;
       color: #92400E;
     }
-    .info-box strong { display: block; margin-bottom: 4px; color: #78350F; }
-    ul {
-      margin: 8px 0 16px 20px;
-      color: #475569;
-      font-size: 0.95rem;
-    }
-    ul li { margin-bottom: 6px; }
-    .btn {
-      display: inline-block;
-      background: #4F46E5;
-      color: #ffffff;
-      text-decoration: none;
-      padding: 14px 28px;
-      border-radius: 10px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      margin-top: 8px;
-      transition: background 0.15s;
-    }
-    .btn:hover { background: #4338CA; }
-    .divider {
-      border: none;
-      border-top: 1px solid #E2E8F0;
-      margin: 28px 0;
-    }
-    .note {
-      font-size: 0.85rem;
-      color: #94A3B8;
-      margin-top: 24px;
-    }
+    .info-box strong { display: block; margin-bottom: 3px; color: #78350F; }
+    .divider { border: none; border-top: 1px solid #E2E8F0; margin: 20px 0; }
+    .note { font-size: 0.82rem; color: #94A3B8; margin-top: 20px; }
     a.plain { color: #4F46E5; text-decoration: none; }
     a.plain:hover { text-decoration: underline; }
   </style>
@@ -118,43 +125,84 @@
 </header>
 
 <main>
-  <div class="card">
-    <h2>Request Account &amp; Data Deletion</h2>
-    <p>
-      You can request deletion of your Mahaveer Palm Grove account and all associated personal
-      data at any time. Once processed, your account, profile, and personal information will be
-      permanently removed from our systems.
-    </p>
 
-    <div class="info-box">
-      <strong>What will be deleted</strong>
-      Your name, contact details, flat information, session tokens, push notification token,
-      and any personal data linked to your account.
+  <p class="intro">
+    You have the right to request deletion of specific data associated with your account,
+    or to delete your account entirely. Choose the option that applies to you below.
+    All requests are processed within <strong>30 days</strong>.
+  </p>
+
+  <!-- Option 1: Partial data deletion -->
+  <div class="card">
+    <div class="card-header">
+      <div class="badge badge-partial">🗂️</div>
+      <div>
+        <h2>Delete specific data</h2>
+        <div class="sub">Keep your account — remove only selected data</div>
+      </div>
     </div>
 
-    <p><strong>What may be retained</strong></p>
+    <p>You can request removal of one or more of the following data types without closing your account:</p>
     <ul>
-      <li>Anonymised transaction records required for accounting purposes (up to 7 years, as required by law)</li>
+      <li>Push notification token</li>
+      <li>Device session records</li>
+      <li>Crash and diagnostic logs</li>
+    </ul>
+
+    <div class="info-box">
+      <strong>Note</strong>
+      Core account data (name, email, phone, flat number) is required for the app to function
+      and cannot be deleted while your account remains active.
+    </div>
+
+    <a class="btn btn-indigo"
+       href="mailto:tejavu@icloud.com?subject=Partial%20Data%20Deletion%20Request%20%E2%80%94%20MPG%20App&body=Hello%2C%0A%0AI%20would%20like%20to%20request%20deletion%20of%20specific%20data%20from%20my%20Mahaveer%20Palm%20Grove%20account.%0A%0AMy%20login%20ID%20%2F%20flat%20number%3A%20%5Benter%20here%5D%0A%0AData%20I%20want%20deleted%20(select%20all%20that%20apply)%3A%0A-%20Push%20notification%20token%0A-%20Device%20session%20records%0A-%20Crash%20and%20diagnostic%20logs%0A%0AThank%20you.">
+      Request Partial Data Deletion
+    </a>
+  </div>
+
+  <!-- Option 2: Full account deletion -->
+  <div class="card">
+    <div class="card-header">
+      <div class="badge badge-full">🗑️</div>
+      <div>
+        <h2>Delete my account</h2>
+        <div class="sub">Permanently remove your account and all personal data</div>
+      </div>
+    </div>
+
+    <p>
+      Deleting your account will permanently remove all personal data linked to your
+      profile from our systems.
+    </p>
+
+    <p><strong>What will be deleted:</strong></p>
+    <ul>
+      <li>Name, email, phone number, flat information</li>
+      <li>Session tokens and device records</li>
+      <li>Push notification token</li>
+      <li>All personal data linked to your account</li>
+    </ul>
+
+    <p><strong>What may be retained:</strong></p>
+    <ul>
+      <li>Anonymised transaction records required for accounting (up to 7 years, as required by law)</li>
       <li>Audit logs that do not contain personally identifiable information</li>
     </ul>
 
-    <p>
-      To submit your request, tap the button below. Your email app will open with a pre-filled
-      message — just hit send. We will process your request within <strong>30 days</strong>.
-    </p>
-
-    <a class="btn" href="mailto:tejavu@icloud.com?subject=Account%20Deletion%20Request%20%E2%80%94%20MPG%20App&body=Hello%2C%0A%0AI%20would%20like%20to%20request%20the%20deletion%20of%20my%20Mahaveer%20Palm%20Grove%20app%20account%20and%20all%20associated%20personal%20data.%0A%0AMy%20login%20ID%20%2F%20flat%20number%3A%20%5Benter%20your%20login%20ID%20here%5D%0A%0AThank%20you.">
+    <a class="btn btn-red"
+       href="mailto:tejavu@icloud.com?subject=Account%20Deletion%20Request%20%E2%80%94%20MPG%20App&body=Hello%2C%0A%0AI%20would%20like%20to%20request%20permanent%20deletion%20of%20my%20Mahaveer%20Palm%20Grove%20app%20account%20and%20all%20associated%20personal%20data.%0A%0AMy%20login%20ID%20%2F%20flat%20number%3A%20%5Benter%20here%5D%0A%0AThank%20you.">
       Request Account Deletion
     </a>
 
     <hr class="divider" />
 
     <p class="note">
-      For questions, contact us at <a class="plain" href="mailto:tejavu@icloud.com">tejavu@icloud.com</a>.
+      For questions contact <a class="plain" href="mailto:tejavu@icloud.com">tejavu@icloud.com</a>.
       View our <a class="plain" href="index.html">Privacy Policy</a>.
     </p>
   </div>
-</main>
 
+</main>
 </body>
 </html>
